@@ -43,11 +43,11 @@ def testBMIOverweightOff2():
 
 
 #Obese
-def testBMIObesesON():
+def testBMIObeseON():
     bmi = calculateBMI(176, 5, 5)
     assert bmi == 30.0
     assert outputBMICategory(bmi) == "Obese"
-def testBMIOverweightOFF():
+def testBMIObeseOFF():
     bmi = calculateBMI(176.5, 5, 5)
     assert bmi == 30.1
     assert outputBMICategory(bmi) == "Obese"
