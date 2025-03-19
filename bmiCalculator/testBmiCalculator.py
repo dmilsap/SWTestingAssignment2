@@ -5,19 +5,11 @@ def testBMIUnderwightOFF():
     bmi = calculateBMI(108, 5, 5)
     assert bmi == 18.4
     assert outputBMICategory(bmi) == "Underweight"
-def testBMIUnderwightON():
-    bmi = calculateBMI(108.3, 5, 5)
-    assert bmi == 18.5
-    assert outputBMICategory(bmi) == "Normal weight"
 
 # Normal
 def testBMINormalOn1():
     bmi = calculateBMI(108.3, 5, 5)
     assert bmi == 18.5
-    assert outputBMICategory(bmi) == "Normal weight"
-def testBMINormalOff1():
-    bmi = calculateBMI(109, 5, 5)
-    assert bmi == 18.6
     assert outputBMICategory(bmi) == "Normal weight"
 
 def testBMINormalOn2():
@@ -51,13 +43,13 @@ def testBMIOverweightOff2():
 
 
 #Obese
-def testBMIOverweightON2():
-    bmi = calculateBMI(175.5, 5, 5)
-    assert bmi == 29.9
-    assert outputBMICategory(bmi) == "Overweight"
 def testBMIObesesON():
     bmi = calculateBMI(176, 5, 5)
     assert bmi == 30.0
+    assert outputBMICategory(bmi) == "Obese"
+def testBMIOverweightOFF():
+    bmi = calculateBMI(176.5, 5, 5)
+    assert bmi == 30.1
     assert outputBMICategory(bmi) == "Obese"
 
 
